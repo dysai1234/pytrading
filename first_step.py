@@ -105,10 +105,10 @@ def calculate_net_profit_loss(buy_price,sell_price,quantity=1,exchange_type="NSE
         Nse_path.click()
     elif exchange_type =='BSE':
         Bse_path.click()
-    net_profit_element=driver.find_element_by_xpath('/html/body/div/main/section[2]/div/div/div[1]/div/div[{}]/div[12]/span'.format(equity))
+    net_profit_element =driver.find_element_by_xpath('/html/body/div/main/section[2]/div/div/div[1]/div/div[1]/div[13]/span')
     net_profit = net_profit_element.text
     #driver.close()
-    return net_profit
+    return float(net_profit)
     
     
         
